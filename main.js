@@ -9,10 +9,10 @@ scoreLeftWrist = 0;
 
 function setup() 
 {
-	canvas = createCanvas(650,400);
+	canvas = createCanvas(650,800);
 	canvas.parent("canvas");
 	video = createCapture(VIDEO);
-	video.size(650, 400);
+	video.size(650, 800);
 	video.hide();
 	poseNet = ml5.poseNet(video, modelLoaded);
 	poseNet.on('pose', gotPoses);
@@ -25,7 +25,7 @@ function modelLoaded()
 
 function draw()
 {
-    image(video, 0, 0, 650, 400);
+    image(video, 0, 0, 650, 800);
     fill("#00ddff");
     stroke("#00ddff");
 
